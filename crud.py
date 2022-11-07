@@ -2,11 +2,13 @@
 import pyodbc
 
 #CRIANDO CONEXAO (BASE DE DAODS, SERVIDOR)
-server = 'DESKTOP-A29H50Q\DBDADOS' 
-database = 'dbBase' 
+server = '[Your server]' 
+database = '[Your database]' 
 
-cnxn = pyodbc.connect('DRIVER={SQL Server}; SERVER='+server+'; DATABASE='+database+'; TrustedConnection=yes;')
+cnxn = pyodbc.connect('DRIVER=[{Your Driver}]; SERVER='+your server+'; DATABASE='+your database+'; TrustedConnection=yes;')
 cursor = cnxn.cursor()
+
+#"TrustedConnection" because it does not need a connection with login and password of the database used.
 
 #CREAT
 def creat():
